@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: 1s all;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-size: cover;
+    
+   
+}
+
+#icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60%;
+    width: 10%;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+#input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    width: 90%;
+    height: 2rem;
+    background-color: transparent;
+}
+.input {
+    animation: 3s openInput forwards;
+}
+
+@keyframes openInput {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+.inputr {
+    animation: 3s openInputr forwards;
+}
+
+@keyframes openInputr {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+    }
+}
+#inputp {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    border: 0;
+    box-shadow: 0rem 0rem 0.3rem rgba(0, 0, 0,0.2);
+    outline: none;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    font-size: 13px;
+    background-color: rgba(241, 241, 241, 0.1);
+}
+.inputp {
+    animation: 3s openInputs forwards;
+   
+}
+@keyframes openInputs {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+.inputpr {
+    animation: 2s openInputsr forwards;
+   
+}
+@keyframes openInputsr {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+    }
+}
+
+#search {
+    display: flex;
+   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0,0.2);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    left: -10rem;
+    gap: 1rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+     background-color: rgba(219, 216, 216, 0.4);
+}
+#search:hover{
+    transition: 1s all;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0,0.3);
+    
+
+}
+.search {
+    animation: 3s openSearch forwards;
+}
+
+@keyframes openSearch {
+    from {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 3rem;
+    }
+    to {
+        height: 3rem;
+        width: 25rem;
+        transform: translateX(11rem);
+        border-radius: 3rem;
+    }
+}
+.searchr {
+    animation: 3s openSearchr forwards;
+}
+
+@keyframes openSearchr {
+    from {
+        
+        height: 3rem;
+        width: 25rem;
+        transform: translateX(11rem);
+        border-radius: 3rem;
+    }
+    to {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;  
+    }
+}
+#cross{
+  
+    width:5%;
+    height: 1rem;
+    position: relative;
+
+}
+.cross{
+    animation: 3s cross forwards;
+}
+@keyframes cross {
+    from{
+    width:5%;
+    height: 1rem;
+    position: relative;
+    }
+    to{
+     width:5%;
+    height: 1rem;
+    position: relative;
+    }
+}
