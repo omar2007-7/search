@@ -1,0 +1,1 @@
+install jQuery in order for the program to work.
