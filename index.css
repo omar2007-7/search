@@ -8,10 +8,10 @@
 body {
     width: 100vw;
     height: 100vh;
-
+    display: flex;
+    flex-direction: column;
     background-size: cover;
-    
-   
+    background-image: url(./assets/images/i1.jpg);
 }
 
 #icon {
@@ -65,7 +65,7 @@ img {
     height: 100%;
     visibility: hidden;
     border: 0;
-    box-shadow: 0rem 0rem 0.3rem rgba(0, 0, 0,0.2);
+    box-shadow: 0rem 0rem 0.3rem rgba(0, 0, 0, 0.2);
     outline: none;
     border-radius: 1rem;
     padding-left: 1rem;
@@ -74,7 +74,6 @@ img {
 }
 .inputp {
     animation: 3s openInputs forwards;
-   
 }
 @keyframes openInputs {
     from {
@@ -86,7 +85,6 @@ img {
 }
 .inputpr {
     animation: 2s openInputsr forwards;
-   
 }
 @keyframes openInputsr {
     from {
@@ -99,7 +97,7 @@ img {
 
 #search {
     display: flex;
-   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0,0.2);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     height: 3rem;
     width: 3rem;
     border-radius: 3rem;
@@ -109,13 +107,13 @@ img {
     gap: 1rem;
     padding-right: 2rem;
     padding-left: 1rem;
-     background-color: rgba(219, 216, 216, 0.4);
+    background-color: rgba(219, 216, 216, 0.4);
+    margin-top: 1rem;
+    justify-self: center;
 }
-#search:hover{
+#search:hover {
     transition: 1s all;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0,0.3);
-    
-
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 .search {
     animation: 3s openSearch forwards;
@@ -123,14 +121,10 @@ img {
 
 @keyframes openSearch {
     from {
-        height: 3rem;
         width: 3rem;
-        border-radius: 3rem;
     }
     to {
-        height: 3rem;
         width: 25rem;
-        border-radius: 3rem;
     }
 }
 .searchr {
@@ -139,95 +133,163 @@ img {
 
 @keyframes openSearchr {
     from {
-        
-        height: 3rem;
         width: 25rem;
-
-        border-radius: 3rem;
     }
     to {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 3rem;  
+        width: 3rem;
     }
 }
-#cross{
-  
-    width:5%;
+#cross {
+    width: 5%;
     height: 1rem;
     position: relative;
-
 }
-.cross{
+.cross {
     animation: 3s cross forwards;
 }
 @keyframes cross {
-    from{
-    width:5%;
-    height: 1rem;
-    position: relative;
-    }
-    to{
-     width:5%;
-    height: 1rem;
-    position: relative;
-    }
-}
-
-@media (max-width:400px) {
-
-    #search {
-    display: flex;
-   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0,0.2);
-    height: 3rem;
-    width: 3rem;
-    border-radius: 3rem;
-    position: relative;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-    padding-right: 0.5rem;
-    padding-left: 1rem;
-     background-color: rgba(219, 216, 216, 0.4);
-}
-#search:hover{
-    transition: 1s all;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0,0.3);
-    
-
-}
-.search {
-    animation: 3s openSearch forwards;
-}
-
-@keyframes openSearch {
     from {
+        width: 5%;
+        height: 1rem;
+        position: relative;
+    }
+    to {
+        width: 5%;
+        height: 1rem;
+        position: relative;
+    }
+}
+#welcome {
+    border: 1px solid;
+    align-self: center;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    box-shadow: 4px 12px 12px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 2rem 0rem 2rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+h1 {
+    align-self: center;
+}
+.hoverd{
+    transition: all 2s;
+    animation: 2s welcome forwards;
+
+}
+@keyframes welcome {
+    0%{
+                transform: scale(1);
+    }
+    50%{
+
+         transform: scale(0.99);
+    }
+    100%{
+          transform: scale(1);
+
+    }
+}
+
+
+
+#themes{
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0rem 0rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    padding-top: 2rem;
+    gap: 20px;
+    padding-left: 10%;
+
+}
+
+
+.theme{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 1px 5px 0px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid;
+    
+}
+#theme1{
+    background-image: url(./assets/images/i1.jpg) ;
+    background-size: contain no-repeat;
+    aspect-ratio: 9/16;
+
+}
+#theme2{
+    background-image: url(./assets/images/i2.jpg) ;
+    background-size: contain no-repeat;
+    aspect-ratio: 9/16;
+
+}
+#theme3{
+    background-image: url(./assets/images/i3.jpg) ;
+    background-size: contain no-repeat;
+    aspect-ratio: 9/16;
+
+}
+#theme4{
+    background-image: url(./assets/images/i4.jpg) ;
+    background-size: contain no-repeat;
+    aspect-ratio: 9/16;
+
+}
+#theme5{
+    background-image: url(./assets/images/i5.jpg) ;
+    background-size: contain no-repeat;
+    aspect-ratio: 9/16;
+
+}
+#theme6{
+    background-image: url(./assets/images/i6.jpg) ;
+    background-size: contain no-repeat;
+    aspect-ratio: 9/16;
+
+}
+
+
+
+
+
+@media (max-width: 500px) {
+    #search {
         height: 3rem;
         width: 3rem;
-        border-radius: 3rem;
     }
-    to {
-        height: 3rem;
-        width: 18rem;
-        border-radius: 3rem;
-    }
-}
-.searchr {
-    animation: 3s openSearchr forwards;
-}
 
-@keyframes openSearchr {
-    from {
-        
-        height: 3rem;
-        width: 25rem;
+    .search {
+        animation: 3s openSearch forwards;
+    }
 
-        border-radius: 3rem;
+    @keyframes openSearch {
+        from {
+            width: 3rem;
+        }
+        to {
+            width: 18rem;
+        }
     }
-    to {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 3rem;  
+    .searchr {
+        animation: 3s openSearchr forwards;
     }
-}
+
+    @keyframes openSearchr {
+        from {
+            width: 18rem;
+        }
+        to {
+            width: 3rem;
+        }
+    }
+    #welcome {
+        width: 90%;
+    }
 }
